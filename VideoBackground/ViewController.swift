@@ -19,6 +19,12 @@ class ViewController: UIViewController {
     }
 
     private func playBackgroundVideo() {
+        let path = Bundle.main.path(forResource: "coastlineIMG3", ofType: "mp4")
+        player = AVPlayer(url: URL(fileURLWithPath: path!))
+        player!.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.view.frame
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         
     }
 }
