@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var player: AVPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        playBackgroundVideo()
     }
 
-
+    private func playBackgroundVideo() {
+        
+    }
 }
 
